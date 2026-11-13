@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.PlayerFaceExtractor;
@@ -29,7 +28,7 @@ public final class Renderer {
         if (list.isEmpty()) return;
 
         Minecraft mc = Minecraft.getInstance();
-        long now = Util.getMillis();
+        long now = System.currentTimeMillis();
 
         list.removeIf(e -> e.started() && now - e.start > e.tier.durationMs);
 
@@ -250,7 +249,7 @@ public final class Renderer {
         var pose = g.pose();
         pose.pushMatrix();
         if (shake > 0.1f) {
-            long ms = Util.getMillis();
+            long ms = System.currentTimeMillis();
             pose.translate((float) Math.sin(ms * 0.09) * shake, (float) Math.cos(ms * 0.13) * shake);
         }
 
