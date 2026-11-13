@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "donutpay",
+  "version": "${version}",
+  "name": "Donut Pay Alerts",
+  "description": "Plays a tiered on-screen animation whenever someone pays you on DonutSMP.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.donutpay.DonutPayClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
